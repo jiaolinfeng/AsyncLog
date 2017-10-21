@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "log.h"
 
-using namespace log;
+using namespace jlf;
 
 class LogThread : public Thread
 {

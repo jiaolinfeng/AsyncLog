@@ -7,7 +7,7 @@ LIB_DIR = -L.
 
 # build define
 LIBS = -lpthread
-COMMON_OBJS = log.o thread.o 
+COMMON_OBJS = log.o thread.o buffer.o
 TARGETS = ft_log
 
 

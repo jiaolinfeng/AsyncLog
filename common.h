@@ -12,7 +12,7 @@
 #include <limits.h>
 #include <stdlib.h>
 
-namespace log
+namespace jlf
 {
 
 static size_t normalize(size_t size)

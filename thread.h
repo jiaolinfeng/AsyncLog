@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 
-namespace log
+namespace jlf
 {
 
 typedef void* (*ThreadFunc) (void*);

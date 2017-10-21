@@ -11,7 +11,7 @@
 
 #include <pthread.h>
 
-namespace log
+namespace jlf
 {
 
 class Mutex

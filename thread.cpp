@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "thread.h"
 
-namespace log
+namespace jlf
 {
 
 Thread::~Thread()
