@@ -215,7 +215,11 @@ int Log::expandBuffer()
 
 Log::~Log()
 {
-    //TODO: clean memory
+    if (buffers_)
+    {
+        delete[] buffers_;
+        buffers_ = NULL;
+    }
 }
 
 }
