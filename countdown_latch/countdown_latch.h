@@ -28,7 +28,7 @@ public:
 #if __cplusplus >= 201103L
     cond_()
 #else
-    cond_(&mtx_)
+    cond_(mtx_)
 #endif
     {
     }
@@ -38,7 +38,7 @@ public:
 #if __cplusplus >= 201103L
         std::unique_lock<std::mutex> lock(mtx_);
 #else
-        jlf::ScopedLock lock(&mtx_);
+        jlf::ScopedLock lock(mtx_);
 #endif
         --counter_;
         if (counter_ <= 0)
@@ -59,7 +59,7 @@ public:
             std::unique_lock<std::mutex> lock(mtx_);
             cond_.wait(lock);
 #else
-            jlf::ScopedLock lock(&mtx_);
+            jlf::ScopedLock lock(mtx_);
             cond_.wait();
 #endif
         }
